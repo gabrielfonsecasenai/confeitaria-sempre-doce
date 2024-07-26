@@ -13,10 +13,10 @@
             <h1>Confeitaria Delícia</h1>
             <nav>
                 <ul>
-                    <li class="nav-button"><a href="{{ url_for('inicial') }}">Início</a></li>
-                    <li class="nav-button"><a href="#">Sobre</a></li>
-                    <li class="nav-button"><a href="#">Cardápio</a></li>
-                    <li class="nav-button"><a href="{{ url_for('contato') }}">Contato</a></li>
+                    <li class="nav-button"><a href="/">Início</a></li>
+                    <li class="nav-button"><a href="sobre">Sobre</a></li>
+                    <li class="nav-button"><a href="/cardapio">Cardápio</a></li>
+                    <li class="nav-button"><a href="/contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,30 +26,33 @@
         <div class="container">
             <h2>Os melhores bolos da cidade!</h2>
             <p>Delícias feitas com amor e ingredientes frescos.</p>
-            <a href="#" class="cta-button">Saiba Mais</a>
         </div>
     </section>
-
     <section class="about">
         <div class="container">
             <h2>Sobre Nós</h2>
-            <p>Somos uma confeitaria dedicada a criar bolos deliciosos e personalizados para todas as ocasiões. Nossa paixão pela confeitaria é refletida em cada criação que sai da nossa cozinha.</p>
+            Todas as ocasiões. Nossa paixão pela confeitaria é refletida em cada criação que sai da nossa cozinha.</p>
+            <br>
+            <a href="/sobre" class="cta-button">Saiba Mais</a>
         </div>
     </section>
 
     <section class="menu">
         <div class="container">
-            <h2>Nosso Cardápio</h2>
+            <h2 id="link-interno">Mais Vendidos</h2>
             <div class="menu-items">
                 <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-chocolate.jpg') }}">
                     <h3>Bolo de Chocolate</h3>
                     <p>Um clássico irresistível com camadas de chocolate rico.</p>
                 </div>
                 <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-morango.jpg') }}">
                     <h3>Bolo de Morango</h3>
                     <p>Fresco e frutado, perfeito para qualquer celebração.</p>
                 </div>
                 <div class="menu-item">
+                    <img src="{{ url_for('static', filename='img/bolo-cenoura.jpg') }}">
                     <h3>Bolo de Cenoura</h3>
                     <p>Uma delícia tradicional com cobertura de chocolate.</p>
                 </div>
